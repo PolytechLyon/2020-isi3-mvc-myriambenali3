@@ -6,7 +6,7 @@
 
 Nom/Prénom: BENALI Myriam
 
-Lien du codesandbox: `.......`
+Lien du codesandbox: `https://codesandbox.io/s/benalimyriamgameoflife-dn8l5`
 
 > Pour générer un codesandbox associé à votre code, [suiver cette doc](https://codesandbox.io/docs/importing#import-from-github)
 
