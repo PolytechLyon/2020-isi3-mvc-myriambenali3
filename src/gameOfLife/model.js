@@ -53,7 +53,7 @@ export class Model {
                 nextState[j][i] = CELL_STATES.DEAD;
               }
             }
-            // si la cellule est morte..
+            // si la cellule est n'est pas vivante..
             else if (!this.isCellAlive(i, j)) {
               // et qu'elle possède 3 voisins vivants...
               if (nbAlive === 3) {
