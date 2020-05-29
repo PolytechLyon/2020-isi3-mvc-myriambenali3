@@ -27,9 +27,13 @@ export class Model {
     this.raf = requestAnimationFrame(() => {
       const currentTime = new Date().getTime();
       if (currentTime - date > RENDER_INTERVAL) {
-        let nextStep = Array.from(new Array(this.height), () =>
+        let nextState = Array.from(new Array(this.height), () =>
           Array.from(new Array(this.width), () => CELL_STATES.NONE)
         );
+
+        for (let i = 0; i < this.height; i++) {
+          nextState[i] = this.state[i].slice();
+        }
 
         for (let i = 0; i < this.width; i++) {
           for (let j = 0; j < this.width; j++) {
@@ -41,27 +45,27 @@ export class Model {
               // et qu'elle possède 2 ou 3 voisins vivants...
               if (nbAlive === 3 || nbAlive === 2) {
                 // alors elle reste en vie
-                nextStep[i][j] = CELL_STATES.ALIVE;
+                nextState[j][i] = CELL_STATES.ALIVE;
               }
               // sinon...
               else {
                 // la cellule meurt
-                nextStep[i][j] = CELL_STATES.DEAD;
+                nextState[j][i] = CELL_STATES.DEAD;
               }
             }
             // si la cellule est morte..
-            else {
+            else if (!this.isCellAlive(i, j)) {
               // et qu'elle possède 3 voisins vivants...
               if (nbAlive === 3) {
                 // alors elle naît
-                nextStep[i][j] = CELL_STATES.ALIVE;
+                nextState[j][i] = CELL_STATES.ALIVE;
               }
             }
           }
         }
 
         // on met à jour l'état de la cellule
-        this.state = nextStep;
+        this.state = nextState;
 
         this.updated();
         this.run(currentTime);
