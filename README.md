@@ -6,7 +6,7 @@
 
 Nom/Prénom: BENALI Myriam
 
-Lien du codesandbox: `https://codesandbox.io/s/benalimyriamgameoflife-dn8l5?file=/src/gameOfLife/model.js`
+Lien du codesandbox: https://codesandbox.io/s/benalimyriamgameoflife-dn8l5?file=/src/gameOfLife/model.js
 
 > Pour générer un codesandbox associé à votre code, [suiver cette doc](https://codesandbox.io/docs/importing#import-from-github)
 
@@ -24,13 +24,13 @@ Il est inventé par [John Horton Conway](https://fr.wikipedia.org/wiki/John_Hort
 
 2. Expliquer ce pattern à l'aide en complétant ce texte.
 
-Le pattern MVC, vise à découper le `controlleur`, de la `vue` et du `modèle` afin de rendre le code plus `clair (et simple)`.
-Les responsabilités ne sont alors plus `groupées`.
+Le pattern MVC, vise à découper le `controlleur`, de la `vue` et du `modèle` afin de rendre le code plus `clair (et plus simple)`.
+Les responsabilités ne sont alors plus `regroupées`.
 On peut ainsi changer l'aspect visuel de sont application sans pour autant impacter le `modèle`.
 
 3. Expliquer dans quels cas on doit privilégier le pattern MVC.
 
-On privilégie le pattern MVC principalement pour la création d'applications web. Cependant, il n'est pas conseillé de mettre en place ce pattern pour des petites applications sans évolution.
+On privilégie le pattern MVC principalement pour la création d'applications web et d'interfaces graphiques. Cependant, il n'est pas conseillé de mettre en place ce pattern pour des petites applications sans évolution.
 
 ## A faire (obligatoire)
 
@@ -46,10 +46,12 @@ En quoi cela relève du design pattern ObserverObservable.
 
 1. Expliquer votre implémentation:
 
-L'usage d'une callback permet ici d' `alerter` afin dire à la _View_ de se redessiner.
-L'objet _Model_ n'a pas de lien avec `View` pourtant grâce à la `fonction updated` il peut notifier la `grille`.
+L'usage d'une callback permet ici d' `alerter (appel de la fonction drawGame()` afin dire à la _View_ de se redessiner.
+L'objet _Model_ n'a pas de lien avec `la View` pourtant grâce à la `fonction callback` il peut notifier la `vue d'un changement et donc modifier la grille`.
 
 2. Insérer ici un UML montrant le pattern Observer-Observable liés aux objects de ce TP.
+
+![UML Pattern Observer-Observable](images/Observer_Observable.png)
 
 ## Optionel
 
