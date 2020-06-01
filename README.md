@@ -20,7 +20,7 @@ Il est inventé par [John Horton Conway](https://fr.wikipedia.org/wiki/John_Hort
 1. Expliquer le design pattern MVC à l'aide d'un schéma à insérer directement ici.
    Utiliser un outils commde Dia pour le représenter. Je veux **votre** schéma, pas un de ceux qu'on peut trouver sur le net.
 
-![Modèle MVC](images/MVC.png)
+![Pattern MVC](images/MVC.png)
 
 2. Expliquer ce pattern à l'aide en complétant ce texte.
 
