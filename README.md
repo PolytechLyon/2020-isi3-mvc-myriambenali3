@@ -46,7 +46,7 @@ En quoi cela relève du design pattern ObserverObservable.
 
 1. Expliquer votre implémentation:
 
-L'usage d'une callback permet ici d' `alerter (appel de la fonction drawGame()` afin dire à la _View_ de se redessiner.
+L'usage d'une callback permet ici d' `alerter (appel de la fonction drawGame())` afin dire à la _View_ de se redessiner.
 L'objet _Model_ n'a pas de lien avec `la View` pourtant grâce à la `fonction callback` il peut notifier la `vue d'un changement et donc modifier la grille`.
 
 2. Insérer ici un UML montrant le pattern Observer-Observable liés aux objects de ce TP.
